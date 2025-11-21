@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumuman Regenerasi GIBEI UNIMED 2026</title>
+    
+    <!-- External Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        /* * ==========================================
+         * CORE VARIABLES & RESET (CSS)
+         * ==========================================
+         */
+        :root {
+            --color-blue: #1a4162;
+            --color-cream: #e6d9c6;
+            --color-dark: #333333;
+            --color-white: #ffffff;
+            --color-gold: #c5a059; /* A little accent gold derived from cream */
+            
+            --font-serif: 'Playfair Display', serif;
+            --font-sans: 'Montserrat', sans-serif;
+            
+            --transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--color-cream);
+            color: var(--color-dark);
+            font-family: var(--font-sans);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* * ==========================================
+         * UTILITIES & ANIMATIONS
+         * ==========================================
+         */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .text-center { text-align: center; }
+        .blue-text { color: var(--color-blue); }
+        .serif-font { font-family: var(--font-serif); }
+
+        /* Fade In Up Animation Class */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: var(--transition);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* * ==========================================
+         * HEADER / HERO SECTION
+         * ==========================================
+         */
+        header {
+            position: relative;
+            height: 100vh;
+            background-color: var(--color-blue);
+            color: var(--color-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        #canvas-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            display: block;
+        }
+
+        .hero-title {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero-tagline {
+            font-size: 1.2rem;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        .scroll-indicator i {
+            font-size: 1.5rem;
+            color: var(--color-cream);
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateX(-50%) translateY(0);}
+            40% {transform: translateX(-50%) translateY(-10px);}
+            60% {transform: translateX(-50%) translateY(-5px);}
+        }
+
+        /* * ==========================================
+         * BPH SECTION (Core Leaders)
+         * ==========================================
+         */
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--color-blue);
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--color-blue);
+            margin: 10px auto 0;
+        }
+
+        .bph-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        /* Special layout for Presdir (Top Center) */
+        .presdir-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            width: 100%;
+        }
+
+        .card {
+            background: var(--color-white);
+            padding: 40px 30px;
+            border-radius: 4px; /* Sharp sophisticated corners */
+            box-shadow: 0 10px 30px rgba(26, 65, 98, 0.1);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border-top: 4px solid var(--color-blue);
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(26, 65, 98, 0.15);
+        }
+
+        .role-badge {
+            background-color: var(--color-cream);
+            color: var(--color-blue);
+            padding: 5px 15px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .person-name {
+            font-size: 1.5rem;
+            color: var(--color-blue);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .presdir-card {
+            transform: scale(1.05);
+            border-color: var(--color-gold);
+        }
+
+        /* * ==========================================
+         * DIVISIONS SECTION
+         * ==========================================
+         */
+        .divisions-section {
+            background-color: var(--color-white);
+            /* Diagonal background pattern */
+            background-image: linear-gradient(135deg, #f9f9f9 25%, transparent 25%, transparent 50%, #f9f9f9 50%, #f9f9f9 75%, transparent 75%, transparent);
+            background-size: 20px 20px;
+        }
+
+        .division-card {
+            background: var(--color-white);
+            border: 1px solid rgba(26, 65, 98, 0.1);
+            padding: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: var(--transition);
+            height: 100%;
+        }
+
+        .division-header {
+            background-color: var(--color-blue);
+            padding: 25px;
+            text-align: center;
+        }
+
+        .division-icon {
+            font-size: 2rem;
+            color: var(--color-cream);
+            margin-bottom: 10px;
+        }
+
+        .division-name {
+            color: var(--color-white);
+            font-size: 1.25rem;
+            margin: 0;
+        }
+
+        .division-body {
+            padding: 25px;
+        }
+
+        .member-group {
+            margin-bottom: 20px;
+        }
+
+        .group-label {
+            font-size: 0.8rem;
+            color: #888;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            display: block;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        .leader-name {
+            font-size: 1.1rem;
+            color: var(--color-blue);
+            font-weight: 700;
+            display: block;
+        }
+
+        .member-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .member-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            font-size: 0.95rem;
+            color: var(--color-dark);
+        }
+
+        .member-list li:last-child {
+            border-bottom: none;
+        }
+
+        /* * ==========================================
+         * FOOTER
+         * ==========================================
+         */
+        footer {
+            background-color: var(--color-blue);
+            color: var(--color-cream);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-family: var(--font-serif);
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .copyright {
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .presdir-card { transform: scale(1); }
+            .bph-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Hero -->
+    <header>
+        <canvas id="canvas-bg"></canvas>
+        <div class="hero-content container">
+            <span class="hero-subtitle reveal">Official Announcement</span>
+            <h1 class="hero-title serif-font reveal">Regenerasi Pengurus<br>GIBEI UNIMED 2026</h1>
+            <p class="hero-tagline reveal">Selamat kepada mahasiswa terpilih yang akan melanjutkan estafet kepemimpinan Galeri Investasi Bursa Efek Indonesia Universitas Negeri Medan.</p>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fa-solid fa-chevron-down"></i>
+        </div>
+    </header>
+
+    <!-- BPH Section -->
+    <section id="bph" class="section-padding container">
+        <div class="text-center reveal">
+            <h2 class="section-title serif-font">Badan Pengurus Harian</h2>
+        </div>
+
+        <!-- JS will inject content here -->
+        <div id="bph-container"></div>
+    </section>
+
+    <!-- Divisions Section -->
+    <section id="divisions" class="section-padding divisions-section">
+        <div class="container">
+            <div class="text-center reveal">
+                <h2 class="section-title serif-font">Fungsionaris Divisi</h2>
+            </div>
+            
+            <div id="divisions-grid" class="bph-grid">
+                <!-- JS will inject content here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-logo">KSPM GIBEI UNIMED</div>
+            <p class="copyright">© 2025 GIBEI UNIMED. Salam Investasi.</p>
+        </div>
+    </footer>
+
+    <script>
+        /* * ==========================================
+         * DATA SOURCE (Extracted from your Sheet)
+         * ==========================================
+         */
+        const bphData = [
+            { role: "Presiden Direktur", name: "Fikri Alfahmi Siregar", isPres: true },
+            { role: "Wakil Presiden Direktur", name: "Fauzan Al Gholi", isPres: false },
+            { role: "Sekretaris Jendral", name: "Saniah Lidiya Hawani", isPres: false },
+            { role: "Wakil Sekretaris Jendral", name: "Annisa Alfathanasya", isPres: false },
+            { role: "Bendahara Umum", name: "Valentina Rentauli Siringo ringo", isPres: false }
+        ];
+
+        const divisionsData = [
+            {
+                id: "kegiatan",
+                name: "Divisi Kegiatan",
+                icon: "fa-calendar-check",
+                head: "Ruwina Rahmanda",
+                vice: "Ronauli Pasaribu",
+                members: [
+                    "Dinda Rachel Minado Purba",
+                    "Kia Santi Irawati Purba",
+                    "Ribka Melisa V Manullang",
+                    "Lia Oktafriani Pandiangan",
+                    "Dewi Fortuna Silaban",
+                ]
+            },
+            {
+                id: "media",
+                name: "Divisi Media",
+                icon: "fa-photo-film",
+                head: "Joice Omasi Angelita Harefa",
+                vice: "Moh Reza Firmansyah",
+                members: [
+                    "Annisa Handayani",
+                    "Alexander Sabastian Pangaribuan",
+                    "Astrid Yemima Br. Sitohang",
+                    "Reva Nova Lina Hutauruk",
+                    "Rosianna Arta Sinaga",
+                ]
+            },
+            {
+                id: "investasi",
+                name: "Divisi Investasi",
+                icon: "fa-chart-line",
+                head: "Andrian",
+                vice: "Farzad Sahnadi Pasaribu",
+                members: [
+                    "Christin Yeshika Napitu",
+                    "M. Fauzan Anshari Sembiring",
+                    "Arief Zaidan Ramadinata",
+                    "Fajar Ramadan Pangestu",
+                    "Cris Diana Sidabutar",
+                ]
+            },
+            {
+                id: "hrd",
+                name: "Divisi HRD",
+                icon: "fa-users-gear",
+                head: "Joanna Brigitta, S.",
+                vice: "M. Irfandi Syahputra",
+                members: [
+                    "Peter Nov Barus",
+                    "Syarah Syafira Husna",
+                    "Salwa Fitry",
+                    "Andika Zulfri",
+                    "Andreas Simamora",
+                ]
+            },
+            {
+                id: "galeri",
+                name: "Divisi Galeri",
+                icon: "fa-building-columns",
+                head: "Muhammad Ariel",
+                vice: "Wiko Prayoga",
+                members: [
+                    "Fahmi Aditya",
+                    "Gabriel Satrio Jeremy Sihombing",
+                    "Ayu Chintia",
+                    "Amelia Ardana",
+                    "Kevin Jeremy Doniartha Saragih",
+                    "Gerry Afriando Sipayung",
+                ]
+            }
+        ];
+
+        /* * ==========================================
+         * DOM RENDERING
+         * ==========================================
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+            renderBPH();
+            renderDivisions();
+            initAnimations();
+            initCanvas();
+        });
+
+        function renderBPH() {
+            const container = document.getElementById('bph-container');
+            
+            // Separate President from the rest for layout
+            const pres = bphData.find(p => p.role.includes('Presiden Direktur') && !p.role.includes('Wakil'));
+            const others = bphData.filter(p => p !== pres);
+
+            let html = '';
+
+            // Render President
+            if (pres) {
+                html += `
+                    <div class="presdir-wrapper reveal">
+                        <div class="card presdir-card">
+                            <span class="role-badge" style="background-color: var(--color-gold); color: #fff;">${pres.role}</span>
+                            <h3 class="person-name serif-font">${pres.name}</h3>
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Render Others
+            html += '<div class="bph-grid">';
+            others.forEach((person, index) => {
+                // Add delay for cascade effect
+                const delay = index * 100; 
+                html += `
+                    <div class="card reveal" style="transition-delay: ${delay}ms">
+                        <span class="role-badge">${person.role}</span>
+                        <h3 class="person-name serif-font">${person.name}</h3>
+                    </div>
+                `;
+            });
+            html += '</div>';
+
+            container.innerHTML = html;
+        }
+
+        function renderDivisions() {
+            const grid = document.getElementById('divisions-grid');
+            
+            divisionsData.forEach((div, index) => {
+                const memberListHTML = div.members.map(m => `<li>${m}</li>`).join('');
+                
+                const cardHTML = `
+                    <div class="division-card reveal" style="transition-delay: ${index * 100}ms">
+                        <div class="division-header">
+                            <i class="fa-solid ${div.icon} division-icon"></i>
+                            <h3 class="division-name serif-font">${div.name}</h3>
+                        </div>
+                        <div class="division-body">
+                            <div class="member-group">
+                                <span class="group-label">Kepala Divisi</span>
+                                <span class="leader-name">${div.head}</span>
+                            </div>
+                            <div class="member-group">
+                                <span class="group-label">Wakil Kepala Divisi</span>
+                                <span class="leader-name">${div.vice}</span>
+                            </div>
+                            <div class="member-group">
+                                <span class="group-label">Anggota Staff</span>
+                                <ul class="member-list">
+                                    ${memberListHTML}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                grid.innerHTML += cardHTML;
+            });
+        }
+
+        /* * ==========================================
+         * ANIMATIONS (Intersection Observer)
+         * ==========================================
+         */
+        function initAnimations() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        }
+
+        /* * ==========================================
+         * CANVAS BACKGROUND (Network Particles)
+         * ==========================================
+         */
+        function initCanvas() {
+            const canvas = document.getElementById('canvas-bg');
+            const ctx = canvas.getContext('2d');
+            let particlesArray;
+
+            // Set canvas size
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            class Particle {
+                constructor(x, y, directionX, directionY, size, color) {
+                    this.x = x;
+                    this.y = y;
+                    this.directionX = directionX;
+                    this.directionY = directionY;
+                    this.size = size;
+                    this.color = color;
+                }
+                draw() {
+                    ctx.beginPath();
+                    ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
+                    ctx.fillStyle = '#e6d9c6'; // Particle Color (Cream)
+                    ctx.fill();
+                }
+                update() {
+                    if (this.x > canvas.width || this.x < 0) this.directionX = -this.directionX;
+                    if (this.y > canvas.height || this.y < 0) this.directionY = -this.directionY;
+                    this.x += this.directionX;
+                    this.y += this.directionY;
+                    this.draw();
+                }
+            }
+
+            function init() {
+                particlesArray = [];
+                let numberOfParticles = (canvas.height * canvas.width) / 15000;
+                for (let i = 0; i < numberOfParticles; i++) {
+                    let size = (Math.random() * 3) + 1;
+                    let x = (Math.random() * ((innerWidth - size * 2) - (size * 2)) + size * 2);
+                    let y = (Math.random() * ((innerHeight - size * 2) - (size * 2)) + size * 2);
+                    let directionX = (Math.random() * 0.4) - 0.2;
+                    let directionY = (Math.random() * 0.4) - 0.2;
+                    particlesArray.push(new Particle(x, y, directionX, directionY, size, '#e6d9c6'));
+                }
+            }
+
+            function animate() {
+                requestAnimationFrame(animate);
+                ctx.clearRect(0, 0, innerWidth, innerHeight);
+
+                for (let i = 0; i < particlesArray.length; i++) {
+                    particlesArray[i].update();
+                }
+                connect();
+            }
+
+            function connect() {
+                let opacityValue = 1;
+                for (let a = 0; a < particlesArray.length; a++) {
+                    for (let b = a; b < particlesArray.length; b++) {
+                        let distance = ((particlesArray[a].x - particlesArray[b].x) * (particlesArray[a].x - particlesArray[b].x))
+                            + ((particlesArray[a].y - particlesArray[b].y) * (particlesArray[a].y - particlesArray[b].y));
+                        if (distance < (canvas.width/7) * (canvas.height/7)) {
+                            opacityValue = 1 - (distance/20000);
+                            ctx.strokeStyle = 'rgba(230, 217, 198,' + opacityValue + ')'; // Line color cream with opacity
+                            ctx.lineWidth = 1;
+                            ctx.beginPath();
+                            ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
+                            ctx.lineTo(particlesArray[b].x, particlesArray[b].y);
+                            ctx.stroke();
+                        }
+                    }
+                }
+            }
+
+            window.addEventListener('resize', () => {
+                canvas.width = innerWidth;
+                canvas.height = innerHeight;
+                init();
+            });
+
+            init();
+            animate();
+        }
+    </script>
+</body>
+</html>
+
