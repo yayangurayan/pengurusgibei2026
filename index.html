@@ -5,12 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pengumuman Regenerasi GIBEI UNIMED 2026</title>
     
-    <!-- External Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -85,6 +83,25 @@
             justify-content: center;
             overflow: hidden;
         }
+        
+        /* --- START OF LOGO ADDITION (Sempurna & Responsif) --- */
+        .header-logo {
+            position: absolute;
+            top: 20px; /* Jarak dari atas */
+            left: 20px; /* Jarak dari kiri */
+            z-index: 10;
+            
+            /* UKURAN STANDAR (Desktop/Laptop) */
+            width: 90px;
+            height: 90px; 
+            
+            object-fit: contain; /* Memastikan logo tidak terpotong */
+            opacity: 1;
+            border-radius: 50%; /* Membuat kontainer logo bulat */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Menambah bayangan halus */
+            transition: all 0.3s ease-in-out; 
+        }
+        /* --- END OF LOGO ADDITION --- */
 
         #canvas-bg {
             position: absolute;
@@ -335,13 +352,23 @@
             .hero-title { font-size: 2.5rem; }
             .presdir-card { transform: scale(1); }
             .bph-grid { grid-template-columns: 1fr; }
+            
+            /* Penyesuaian logo untuk layar kecil (Mobile) */
+            .header-logo {
+                width: 60px; 
+                height: 60px;
+                top: 15px;
+                left: 15px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header / Hero -->
     <header>
+        <img src="img/gibei.jpg" alt="Logo GIBEI UNIMED" class="header-logo">
+        
         <canvas id="canvas-bg"></canvas>
         <div class="hero-content container">
             <span class="hero-subtitle reveal">Official Announcement</span>
@@ -353,17 +380,14 @@
         </div>
     </header>
 
-    <!-- BPH Section -->
     <section id="bph" class="section-padding container">
         <div class="text-center reveal">
             <h2 class="section-title serif-font">Badan Pengurus Harian</h2>
         </div>
 
-        <!-- JS will inject content here -->
         <div id="bph-container"></div>
     </section>
 
-    <!-- Divisions Section -->
     <section id="divisions" class="section-padding divisions-section">
         <div class="container">
             <div class="text-center reveal">
@@ -371,12 +395,10 @@
             </div>
             
             <div id="divisions-grid" class="bph-grid">
-                <!-- JS will inject content here -->
-            </div>
+                </div>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-logo">KSPM GIBEI UNIMED</div>
@@ -661,4 +683,3 @@
     </script>
 </body>
 </html>
-
